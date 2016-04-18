@@ -4,6 +4,7 @@ syntax enable
 
 filetype plugin on
 
+"Cleaned up dependancy files
 source ~/.vim/startup/settings.vim
 source ~/.vim/startup/appearance.vim
 source ~/.vim/startup/mappings.vim
