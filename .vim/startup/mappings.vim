@@ -1,20 +1,12 @@
 "-------------Mappings--------------"
+imap jj <Esc>
+imap jk <Esc>
 
 "Stop being a n00b!
-no <up> ddkP
-no <down> ddp
-no <left> <Nop>
-no <right> <Nop>
-
-ino <up> <Nop>
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-
-vno <up> <Nop>
-vno <down> <Nop>
-vno <left> <Nop>
-vno <right> <Nop>
+noremap <up> <NOP>
+noremap <down> <NOP>
+noremap <left> <NOP>
+noremap <right> <NOP>
 
 "Split management
 nmap <C-J> <C-W><C-J>
@@ -33,8 +25,8 @@ nmap <Leader><space> :nohlsearch<cr>
 "Tag search"
 nmap <Leader>f :tag<space>
 
-"Make NERDTree easier to toggle
-nmap <D-1> :NERDTreeToggle<cr>
+"Make :Explore easier to open
+nmap <D-1> :Vexplore<cr>
 
 nmap <Leader>f :tag<space>
 
