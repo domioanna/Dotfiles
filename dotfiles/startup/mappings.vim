@@ -14,6 +14,14 @@ nmap <C-K> <C-W><C-K>
 nmap <C-H> <C-W><C-H>
 nmap <C-L> <C-W><C-L>
 
+"Move single lines
+nmap <C-k> ddkP
+nmap <C-j> ddp
+
+"Move multiple lines
+vmap <C-k> xkP`[V`]
+vmap <C-j> xp`[V`]
+
 "Make it easy to edit the Vimrc, plugins or a snippets file.
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 nmap <Leader>ep :tabedit ~/.vim/plugins.vim<cr>
