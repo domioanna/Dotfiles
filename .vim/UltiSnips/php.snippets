@@ -1,0 +1,68 @@
+snippet class
+<?php
+
+namespace $2;
+
+class $1
+{
+	$3
+}
+
+endsnippet
+
+snippet test
+/** @test */
+public function it_$1()
+{
+	$2
+}
+
+endsnippet
+
+snippet met
+public function $1($2)
+{
+	$3
+}
+
+endsnippet
+
+snippet pmet
+protected function $1($2)
+{
+	$3
+}
+
+endsnippet
+
+snippet smet
+public static function $1($2)
+{
+	$3
+}
+
+endsnippet
+
+snippet rg
+Route::get('$1', '$2');
+endsnippet
+
+snippet rgf
+Route::get('$1', function(){
+	$2
+});
+endsnippet
+
+snippet rp
+Route::post('$1', '$2');
+endsnippet
+
+snippet rpf
+Route::get('$1', function(){
+	$2
+});
+endsnippet
+
+snippet $
+$this->
+endsnippet
