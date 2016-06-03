@@ -22,6 +22,10 @@ nmap <C-j> ddp
 vmap <C-k> xkP`[V`]
 vmap <C-j> xp`[V`]
 
+"Indent and keep highlighted
+vnoremap < <gv
+vnoremap > >gv
+
 "Make it easy to edit the Vimrc, plugins or a snippets file.
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 nmap <Leader>ep :tabedit ~/.vim/plugins.vim<cr>
@@ -34,7 +38,10 @@ nmap <Leader><space> :nohlsearch<cr>
 nmap <Leader>f :tag<space>
 
 "Make :Explore easier to open
-nmap <D-1> :Vexplore<cr>
+" nmap <D-1> :Vexplore<cr>
+
+"Make NERDTree easier to toggle
+nmap <D-1> :NERDTreeToggle<cr>
 
 nmap <Leader>f :tag<space>
 

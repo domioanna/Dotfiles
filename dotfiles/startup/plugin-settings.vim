@@ -37,6 +37,12 @@ let g:CommandTWildIgnore=&wildignore . ",*/bower_components,*/node_modules,"
 let g:netrw_liststyle=3
 
 "/
+"/ NERDTree
+"/
+
+let NERDTreeHijackNetrw = 0
+
+"/
 "/ Greplace.vim
 "/
 
