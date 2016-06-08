@@ -1,3 +1,3 @@
 
 "Clean the whole document
-let @f='mmggVG=`m'  
+let @f='mmgg=G`m'  
