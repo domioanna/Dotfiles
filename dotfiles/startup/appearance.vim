@@ -25,7 +25,3 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
-
-set tabstop=4 shiftwidth=4 softtabstop=4 expandtab smarttab
-set whichwrap+=<,>,[,]
-

@@ -11,6 +11,14 @@ set number						    "Let's activate line numbers.
 set splitbelow
 set splitright
 
+set tabstop=4 
+set shiftwidth=4 
+set softtabstop=4 
+set expandtab 
+set smarttab 
+set smartindent
+
+set whichwrap+=<,>,[,]
 
 "-------------Search--------------"
 set hlsearch

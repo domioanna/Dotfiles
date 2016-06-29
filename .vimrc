@@ -12,7 +12,6 @@ source ~/.vim/startup/plugin-settings.vim
 source ~/.vim/startup/commands.vim
 source ~/.vim/plugins.vim
 
-
 "-------------Auto-Commands--------------"
 "Automatically source the Vimrc file on save.
 augroup autosourcing

@@ -4,33 +4,34 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-vinegar'
+Plugin 'VundleVim/Vundle.vim'           " Plugin Installer
+Plugin 'tpope/vim-vinegar'              " 
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'wincent/command-t'
-Plugin 'rking/ag.vim'
-Plugin 'skwp/greplace.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'tobyS/vmustache'                " Required: for PDV
+Plugin 'tobyS/pdv'                      " Doc blocks
+" Plugin 'ervandew/supertab'
+
+" PHP Related
 Plugin 'StanAngeloff/php.vim'
 Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'stephpy/vim-php-cs-fixer'
-Plugin 'SirVer/ultisnips'
-Plugin 'tobyS/vmustache'
-Plugin 'tobyS/pdv'
-Plugin 'ervandew/supertab'
-Plugin 'janko-m/vim-test'
-Plugin 'shemerey/vim-peepopen'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'joonty/vim-phpunitqf'
-Plugin 'jwalton512/vim-blade'                 "Laravel Blade Syntax
+Plugin 'janko-m/vim-test'
+Plugin 'jwalton512/vim-blade'
 Plugin 'zzantares/vim-laravel'
+
+" Styling related
 Plugin 'mattn/emmet-vim'
 Plugin 'genoma/vim-less'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'vim-scripts/vim-stylus'
+
+Plugin 'captbaritone/better-indent-support-for-php-with-html'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

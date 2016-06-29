@@ -43,13 +43,6 @@ let g:netrw_liststyle=3
 let NERDTreeHijackNetrw = 0
 
 "/
-"/ Greplace.vim
-"/
-
-set grepprg=ag
-let g:grep_cmd_opts = '--line-numbers --noheading'
-
-"/
 "/ pdv
 "/
 
@@ -69,4 +62,5 @@ autocmd BufNewFile,BufRead *.blade.php setlocal ft=html
 "/
 
 let g:user_emmet_mode='a'    "enable all function in all mode.
-
+let g:user_emmet_expandabbr_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
