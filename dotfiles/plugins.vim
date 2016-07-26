@@ -7,13 +7,18 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'           " Plugin Installer
 Plugin 'tpope/vim-vinegar'              " Enhancing Netwr  
 Plugin 'tpope/vim-surround'             " Adding 'surround' objects
+Plugin 'tpope/vim-unimpaired'           " More mapping pairs
 Plugin 'scrooloose/nerdtree'            " Sidebar functionality
-Plugin 'scrooloose/nerdcommenter'       " Comment toggler
+Plugin 'tpope/vim-commentary'           " Comment toggler
 Plugin 'wincent/command-t'              " File search
 Plugin 'ctrlpvim/ctrlp.vim'             " Project search (maybe remove?)
 Plugin 'SirVer/ultisnips'               " Snippet tool
 Plugin 'tobyS/vmustache'                " Required: for PDV
 Plugin 'tobyS/pdv'                      " Doc blocks
+
+" Appearance related
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plugin 'chriskempson/base16-vim'
 
 " PHP Related
 Plugin 'StanAngeloff/php.vim'

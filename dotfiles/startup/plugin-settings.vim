@@ -49,6 +49,12 @@ let NERDTreeHijackNetrw = 0
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 
 "/
+"/ Emmet
+"/
+
+let g:user_emmet_mode='a'    "enable all function in all mode.
+
+"/
 "/ Ultisnips
 "/
 
@@ -56,11 +62,3 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 autocmd BufNewFile,BufRead *.blade.php setlocal ft=html
-
-"/
-"/ Emmet
-"/
-
-let g:user_emmet_mode='a'    "enable all function in all mode.
-let g:user_emmet_expandabbr_key='<Tab>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")

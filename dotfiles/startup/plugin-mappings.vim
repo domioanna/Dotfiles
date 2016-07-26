@@ -1,49 +1,7 @@
-"-------------Mappings--------------"
-imap jj <Esc>
-imap jk <Esc>
-
-"Stop being a n00b!
-noremap <up> <NOP>
-noremap <down> <NOP>
-noremap <left> <NOP>
-noremap <right> <NOP>
-
-"Split management
-nmap <C-J> <C-W><C-J>
-nmap <C-K> <C-W><C-K>
-nmap <C-H> <C-W><C-H>
-nmap <C-L> <C-W><C-L>
-
-"Move single lines
-nmap <C-k> ddkP
-nmap <C-j> ddp
-
-"Move multiple lines
-vmap <C-k> xkP`[V`]
-vmap <C-j> xp`[V`]
-
-"Indent and keep highlighted
-vnoremap < <gv
-vnoremap > >gv
-
-"Make it easy to edit the Vimrc, plugins or a snippets file.
-nmap <Leader>ev :tabedit $MYVIMRC<cr>
-nmap <Leader>ep :tabedit ~/.vim/plugins.vim<cr>
-nmap <Leader>es :UltiSnipsEdit
-
-"Add simple highlight removal.
-nmap <Leader><space> :nohlsearch<cr>
-
-"Tag search"
-nmap <Leader>f :tag<space>
-
-"Make :Explore easier to open
-" nmap <D-1> :Vexplore<cr>
+"--------------Plugin Mappings---------------"
 
 "Make NERDTree easier to toggle
 nmap <D-1> :NERDTreeToggle<cr>
-
-nmap <Leader>f :tag<space>
 
 "---------------Laravel-Specific---------------"
 nmap <Leader>lr :e app/Http/routes.php<cr>
@@ -84,15 +42,6 @@ nmap <D-p> <Plug>PeepOpen
 
 nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
 
-"/
-"/ Emmet
-"/
-
-imap <expr><tab>
-  \ emmet#isExpandable() ? "\<C-Y>," :
-  \ "\<tab>"
-
-
 "--------------- Insert namespaces eg. use Class; ------------"
 
 function! IPhpInsertUse()
@@ -110,8 +59,3 @@ function! IPhpExpandClass()
 endfunction
 autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
-
-"--------------- Sort the order of the selected lines by length ---------------"
-
-vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>
-
