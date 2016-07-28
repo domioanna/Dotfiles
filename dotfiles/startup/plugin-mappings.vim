@@ -4,22 +4,16 @@
 nmap <D-1> :NERDTreeToggle<cr>
 
 "---------------Laravel-Specific---------------"
-nmap <Leader>lr :e app/Http/routes.php<cr>
-nmap <Leader>lm :!php artisan make:
-nmap <Leader><Leader>c :e app/Http/Controllers/<cr>
-nmap <Leader><Leader>a :e app/<cr>
-nmap <Leader><Leader>t :e tests/<cr>
-nmap <Leader><Leader>ra :e resources/assets/<cr>
-nmap <Leader><Leader>rv :e resources/views/<cr>
+nmap <LocalLeader>lr :e app/Http/routes.php<cr>
 
 "/
 "/ PHPUnit
 "/
 
-nmap <Leader>ts :Test<cr>
-nmap <Leader>tu :Test tests/unit<cr>
-nmap <Leader>ta :Test tests/acceptance<cr>
-nmap <Leader>td :Test tests/
+nmap <LocalLeader>ts :Test<cr>
+nmap <LocalLeader>tu :Test tests/unit<cr>
+nmap <LocalLeader>ta :Test tests/acceptance<cr>
+nmap <LocalLeader>td :Test tests/
 
 "/
 "/ PHP CS Fixer

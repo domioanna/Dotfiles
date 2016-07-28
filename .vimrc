@@ -23,4 +23,5 @@ source ~/.vim/plugins.vim
 augroup autosourcing
     autocmd!
     autocmd BufWritePost .vimrc source %
+    autocmd BufWritePost */*/*.vim source $MYVIMRC
 augroup END
