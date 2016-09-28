@@ -42,8 +42,8 @@ function! IPhpInsertUse()
     call PhpInsertUse()
     call feedkeys('a',  'n')
 endfunction
-autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
+autocmd FileType php inoremap <LocalLeader>n <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <LocalLeader>n :call PhpInsertUse()<CR>
 
 "--------------- Expand a class ------------"
 
@@ -51,5 +51,5 @@ function! IPhpExpandClass()
     call PhpExpandClass()
     call feedkeys('a', 'n')
 endfunction
-autocmd FileType php noremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
-autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
+autocmd FileType php noremap <LocalLeader>e <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <LocalLeader>e :call PhpExpandClass()<CR>
