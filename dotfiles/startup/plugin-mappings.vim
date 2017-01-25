@@ -6,29 +6,12 @@ nmap <D-1> :NERDTreeToggle<cr>
 "---------------Laravel-Specific---------------"
 nmap <LocalLeader>lr :e app/Http/routes.php<cr>
 
-"/
-"/ PHPUnit
-"/
-
-nmap <LocalLeader>ts :Test<cr>
-nmap <LocalLeader>tu :Test tests/unit<cr>
-nmap <LocalLeader>ta :Test tests/acceptance<cr>
-nmap <LocalLeader>td :Test tests/
 
 "/
 "/ PHP CS Fixer
 "/
 
 nnoremap <silent><leader>ff :call PhpCsFixerFixFile()<cr>
-
-"/
-"/ CtrlP
-"/
-
-nmap <D-p> :CtrlP<cr>
-nmap <c-R> :CtrlPBufTag<cr>
-nmap <D-e> :CtrlPMRUFiles<cr>
-nmap <D-p> <Plug>PeepOpen
 
 "/
 "/ pdv

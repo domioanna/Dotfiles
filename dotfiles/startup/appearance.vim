@@ -6,21 +6,26 @@ set linespace=15   				    "Macvim-specific line-height.
 hi LineNr guibg=bg
 hi vertsplit guifg=bg guibg=bg
 set nuw=4
+set laststatus=0                    " Hide status line
+
+" colorscheme nova
+color hybrid_material
 
 if has("gui_running")
-    colorscheme hybrid
-    " colorscheme ocean
     set macligatures
 endif
 
-hi TabLine      guifg=#394159 guibg=#242831 gui=none ctermfg=254 ctermbg=238 cterm=none
-hi TabLineSel   guifg=#dddddd guibg=#252a3a gui=bold ctermfg=231 ctermbg=235 cterm=bold
-hi TabLineFill  guifg=#394159 guibg=#242831 gui=none ctermfg=254 ctermbg=238 cterm=none
+let g:enable_bold_font = 1
 
-let &colorcolumn=join(range(101,999),",")
-hi ColorColumn ctermbg=235 guibg=#242831
 
-hi Normal guibg=#262933 ctermfg=grey ctermbg=darkblue
+hi TabLine      guifg=#2b3b43 guibg=#1d292f gui=none ctermfg=254 ctermbg=238 cterm=none
+" hi TabLineSel   guifg=#dddddd guibg=#394c56 gui=bold ctermfg=231 ctermbg=235 cterm=bold
+hi TabLineFill  guifg=#2b3b43 guibg=#1d292f gui=none ctermfg=254 ctermbg=238 cterm=none
+
+" let &colorcolumn=join(range(101,999),",")
+" hi ColorColumn ctermbg=235 guibg=#394c57
+
+" hi Normal guibg=#262933 ctermfg=grey ctermbg=darkblue
 
 set wrap linebreak textwidth=0
 set nowrap

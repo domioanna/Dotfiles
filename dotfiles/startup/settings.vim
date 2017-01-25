@@ -20,5 +20,5 @@ set smartindent
 set whichwrap+=<,>,[,]
 
 "-------------Search--------------"
-set hlsearch
+set nohlsearch
 set incsearch

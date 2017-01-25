@@ -2,13 +2,6 @@
 "-------------Plugins--------------"
 
 "/
-"/ PHPUnit
-"/
-
-let g:phpunit_cmd = "./vendor/bin/phpunit"
-let g:phpunit_args_append = "--stop-on-failure  --colors=always"
-
-"/
 "/ PHP CS Fixer
 "/
 
@@ -16,13 +9,6 @@ let g:php_cs_fixer_path = "~/.composer/vendor/bin/php-cs-fixer"    "make the pat
 let g:php_cs_fixer_level = "psr2"                "set level to PSR-2
 let g:php_cs_fixer_fixers_list = "-psr0"         "disable PSR-0
 let g:php_cs_fixer_enable_default_mapping = 0    "don't add ley mappings
-
-"/
-"/ CtrlP
-"/
-
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
 "/
 "/ Command-T

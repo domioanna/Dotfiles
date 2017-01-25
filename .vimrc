@@ -6,7 +6,6 @@ filetype plugin on
 
 "Cleaned up dependancy files
 source ~/.vim/startup/settings.vim
-source ~/.vim/startup/appearance.vim
 
 source ~/.vim/startup/mappings/visual.vim
 source ~/.vim/startup/mappings/commands.vim
@@ -17,6 +16,8 @@ source ~/.vim/startup/plugin-settings.vim
 source ~/.vim/startup/plugin-mappings.vim
 
 source ~/.vim/plugins.vim
+
+source ~/.vim/startup/appearance.vim
 
 "-------------Auto-Commands--------------"
 "Automatically source the Vimrc file on save.

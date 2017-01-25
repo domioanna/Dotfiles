@@ -1,4 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/domioanna/Code/MyPropertyApp'
 let g:netrw_dirhist_2='/Users/domioanna/Code/MyPropertyApp/resources/views/emails/account'
+let g:netrw_dirhist_3='/Users/domioanna/Code/MyPropertyApp'
+let g:netrw_dirhist_4='/Users/domioanna/Code/MyPropertyApp/resources'
+let g:netrw_dirhist_5='/Users/domioanna/Code'
+let g:netrw_dirhist_6='/Users/domioanna/Code/MyPropertyApp/resources/assets'
+let g:netrw_dirhist_7='/Users/domioanna/Code/MyPropertyApp/resources/assets/js'
+let g:netrw_dirhist_8='/Users/domioanna/Code/MyPropertyApp/app'
+let g:netrw_dirhist_9='/Users/domioanna/Code/MyPropertyApp'
