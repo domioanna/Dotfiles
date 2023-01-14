@@ -10,7 +10,21 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 
+-- Disable annoying command line thing
+vim.keymap.set('n', 'q:', ':q<CR>')
+
+-- Paste replace visual selection without copying it
+vim.keymap.set('v', 'p', '"_dP')
+
+-- Easy insertion of a trailing ; or , from insert mode
+vim.keymap.set('i', ';;', '<Esc>A;<Esc>')
+vim.keymap.set('i', ',,', '<Esc>A,<Esc>')
+
 vim.keymap.set('n', '<leader>k', ':nohlsearch<CR>')
+
+-- Open the current file in the default program (on Mac this should just be just `open`)
+vim.keymap.set('n', '<leader>x', ':!open %<cr><cr>')
+
 vim.keymap.set('n', '<leader>Q', ':bufdo bdelete<CR>')
 
 -- Allow gf to open non-existent files
@@ -21,27 +35,10 @@ vim.keymap.set('', 'gf', ':edit <cfile><CR>')
 vim.keymap.set('v', 'y', 'myy`y')
 vim.keymap.set('v', 'Y', 'myY`y')
 
--- Paste replace visual selection without copying it
-vim.keymap.set('v', 'p', '"_dP')
-
--- Easy insertion of a trailing ; or , from insert mode
-vim.keymap.set('i', ';;', '<Esc>A;<Esc>')
-vim.keymap.set('i', ',,', '<Esc>A,<Esc>')
-
--- Open the current file in the default program (on Mac this should just be just `open`)
-vim.keymap.set('n', '<leader>x', ':!xdg-open %<cr><cr>')
-
--- Disable annoying command line thing
-vim.keymap.set('n', 'q:', ':q<CR>')
-
--- Resize with arrows
-vim.keymap.set('n', '<C-Up>', ':resize +2<CR>')
-vim.keymap.set('n', '<C-Down>', ':resize -2<CR>')
-vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>')
-vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>')
-
 -- Move text up and down
-vim.keymap.set('i', '<A-j>', '<Esc>:move .+1<CR>==gi')
-vim.keymap.set('i', '<A-k>', '<Esc>:move .-2<CR>==gi')
-vim.keymap.set('x', '<A-j>', ":move '>+1<CR>gv-gv")
-vim.keymap.set('x', '<A-k>', ":move '<-2<CR>gv-gv")
+vim.keymap.set('i', '<C-j>', '<Esc>:move .+1<CR>==gi')
+vim.keymap.set('i', '<C-k>', '<Esc>:move .-2<CR>==gi')
+vim.keymap.set('n', '<C-j>', ':move .+1<CR>==')
+vim.keymap.set('n', '<C-k>', ':move .-2<CR>==')
+vim.keymap.set('x', '<C-j>', ":move '>+1<CR>gv-gv")
+vim.keymap.set('x', '<C-k>', ":move '<-2<CR>gv-gv")
