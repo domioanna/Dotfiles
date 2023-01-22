@@ -22,5 +22,6 @@ require('nvim-tree').setup({
     }
 })
 
+
 vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', {fg = '#30323E'})
 vim.keymap.set('n', '<Leader>1', ':NvimTreeFindFileToggle<CR>')

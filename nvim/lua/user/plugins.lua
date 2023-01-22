@@ -25,13 +25,21 @@ local use = require('packer').use
 
 -- Colour Schemes and Themes
 use({
-    'ishan9299/nvim-solarized-lua',
+    'sainnhe/everforest',
     config = function()
-        vim.cmd('colorscheme solarized')
+        vim.cmd('colorscheme everforest')
         vim.cmd('hi LineNr guibg=cleared')
         vim.api.nvim_set_hl(0, 'FloatBorder', {
             fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
             bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
+        })
+        vim.api.nvim_set_hl(0, 'StatusLineNonText', {
+            fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+            bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+        })
+        vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#3D484D'})
+        vim.api.nvim_set_hl(0, 'NvimTreeNormal', {
+            bg = vim.api.nvim_get_hl_by_name('CursorLineBg', true).background,
         })
     end,
 })
@@ -130,6 +138,54 @@ use({
             fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
             bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
         })
+    end,
+})
+
+-- Status Line
+use({
+    'nvim-lualine/lualine.nvim',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = function()
+        require('user/plugins/lualine')
+    end
+})
+
+use({
+    'akinsho/bufferline.nvim',
+    requires = 'kyazdani42/nvim-web-devicons',
+    after = 'everforest',
+    config = function()
+        require('user/plugins/bufferline')
+    end
+})
+
+use({
+    'lukas-reineke/indent-blankline.nvim',
+    config = function()
+        require('user/plugins/indent-blankline')
+    end
+})
+
+use ({
+    'glepnir/dashboard-nvim',
+    config = function()
+        require('user/plugins/dashboard-nvim')
+    end
+})
+
+use({
+    'neovim/nvim-lspconfig',
+    requires = {
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
+        'j-hui/fidget.nvim',
+    },
+})
+
+use({
+    'vim-test/vim-test',
+    config = function()
+        require('user.plugins.vim-test')
     end,
 })
 
