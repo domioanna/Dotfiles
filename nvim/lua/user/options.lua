@@ -6,6 +6,8 @@ vim.opt.softtabstop = 4
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
