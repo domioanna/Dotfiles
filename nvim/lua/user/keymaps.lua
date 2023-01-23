@@ -42,3 +42,7 @@ vim.keymap.set('n', '<C-j>', ':move .+1<CR>==')
 vim.keymap.set('n', '<C-k>', ':move .-2<CR>==')
 vim.keymap.set('x', '<C-j>', ":move '>+1<CR>gv-gv")
 vim.keymap.set('x', '<C-k>', ":move '<-2<CR>gv-gv")
+
+vim.keymap.set('x', '<leader>p', "\"_dP")
+vim.keymap.set('n', '<leader>p', "\"_d")
+vim.keymap.set('v', '<leader>p', "\"_d")
