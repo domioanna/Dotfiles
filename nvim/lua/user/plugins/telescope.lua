@@ -1,3 +1,4 @@
+local telescope = require('telescope')
 local actions = require('telescope.actions')
 
 vim.cmd([[
@@ -9,7 +10,7 @@ vim.cmd([[
   highlight link TelescopeBorder CursorLineBg
 ]])
 
-require('telescope').setup({
+telescope.setup({
   defaults = {
     path_display = { truncate = 1 },
     prompt_prefix = '   ',
