@@ -194,6 +194,36 @@ use({
     requires = 'tpope/vim-rhubarb',
 })
 
+-- Floating Terminal
+use({
+    'voldikss/vim-floaterm',
+    config = function()
+        vim.keymap.set('n', '<leader>2',':FloatermToggle<CR>')
+        vim.keymap.set('t', '<leader>2','<C-\\><C-n>:FloatermToggle<CR>')
+        vim.g.floaterm_width = 0.9
+        vim.g.floaterm_height = 0.9
+        vim.cmd([[
+            highlight link Floaterm CursorLine
+            highlight link FloatermBorder CursorLineBg
+        ]])
+    end
+})
+
+-- Treesitter
+use({
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+        require('nvim-treesitter.install').update({ with_sync = true })
+    end,
+    requires = {
+        'JoosepAlviste/nvim-ts-context-commentstring',
+        'nvim-treesitter/nvim-treesitter-textobjects',
+    },
+    config = function()
+        require('user.plugins.treesitter')
+    end,
+})
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then
