@@ -25,8 +25,6 @@ vim.keymap.set('n', '<leader>k', ':nohlsearch<CR>')
 -- Open the current file in the default program (on Mac this should just be just `open`)
 vim.keymap.set('n', '<leader>x', ':!open %<cr><cr>')
 
-vim.keymap.set('n', '<leader>Q', ':bufdo bdelete<CR>')
-
 -- Allow gf to open non-existent files
 vim.keymap.set('', 'gf', ':edit <cfile><CR>')
 
@@ -43,6 +41,5 @@ vim.keymap.set('n', '<C-k>', ':move .-2<CR>==')
 vim.keymap.set('x', '<C-j>', ":move '>+1<CR>gv-gv")
 vim.keymap.set('x', '<C-k>', ":move '<-2<CR>gv-gv")
 
-vim.keymap.set('x', '<leader>p', "\"_dP")
-vim.keymap.set('n', '<leader>p', "\"_d")
+vim.keymap.set('n', '<leader>p', "\"_dP")
 vim.keymap.set('v', '<leader>p', "\"_d")
