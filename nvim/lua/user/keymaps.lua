@@ -34,12 +34,9 @@ vim.keymap.set('v', 'y', 'myy`y')
 vim.keymap.set('v', 'Y', 'myY`y')
 
 -- Move text up and down
-vim.keymap.set('i', '<C-j>', '<Esc>:move .+1<CR>==gi')
-vim.keymap.set('i', '<C-k>', '<Esc> :move .-2<CR>==gi')
-vim.keymap.set('n', '<C-j>', ':move .+1<CR>==')
-vim.keymap.set('n', '<C-k>', ':move .-2<CR>==')
-vim.keymap.set('x', '<C-j>', ":move '>+1<CR>gv-gv")
-vim.keymap.set('x', '<C-k>', ":move '<-2<CR>gv-gv")
-
-vim.keymap.set('n', '<leader>p', "\"_dP")
-vim.keymap.set('v', '<leader>p', "\"_d")
+vim.keymap.set('i', '∆', '<Esc>:move .+1<CR>==gi')
+vim.keymap.set('i', '˚', '<Esc> :move .-2<CR>==gi')
+vim.keymap.set('n', '∆', ':move .+1<CR>==')
+vim.keymap.set('n', '˚', ':move .-2<CR>==')
+vim.keymap.set('v', '∆', ":move '>+1<CR>gv=gv")
+vim.keymap.set('v', '˚', ":move '<-2<CR>gv=gv")
