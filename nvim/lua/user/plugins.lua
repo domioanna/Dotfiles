@@ -24,31 +24,31 @@ require('packer').init({
 local use = require('packer').use
 
 use({
-  'jessarcher/onedark.nvim',
-  config = function()
-    vim.cmd('colorscheme onedark')
+    'jessarcher/onedark.nvim',
+    config = function()
+        vim.cmd('colorscheme onedark')
 
-    -- Hide the characters in FloatBorder
-    vim.api.nvim_set_hl(0, 'FloatBorder', {
-      fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
-      bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
-    })
+        -- Hide the characters in FloatBorder
+        vim.api.nvim_set_hl(0, 'FloatBorder', {
+            fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
+            bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
+        })
 
-    -- Make the StatusLineNonText background the same as StatusLine
-    vim.api.nvim_set_hl(0, 'StatusLineNonText', {
-      fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
-      bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
-    })
+        -- Make the StatusLineNonText background the same as StatusLine
+        vim.api.nvim_set_hl(0, 'StatusLineNonText', {
+          fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
+          bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+        })
 
-    -- Hide the characters in CursorLineBg
-    vim.api.nvim_set_hl(0, 'CursorLineBg', {
-      fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
-      bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
-    })
+        -- Hide the characters in CursorLineBg
+        vim.api.nvim_set_hl(0, 'CursorLineBg', {
+          fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+          bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+        })
 
-    vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
-    vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
-  end,
+        vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
+        vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
+    end,
 })
 
 use('wbthomason/packer.nvim')           -- Packer can manage itself
@@ -64,7 +64,7 @@ use('nelstrom/vim-visual-star-search')  -- Enable * searching with visually sele
 use('jessarcher/vim-heritage')          -- Automatically create parent dirs when saving
 
 use({
-  'sheerun/vim-polyglot',
+    'sheerun/vim-polyglot',
 })
 
 -- Text objects for HTML attributes
@@ -168,6 +168,21 @@ use({
     end
 })
 
+-- Treesitter
+use({
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+        require('nvim-treesitter.install').update({ with_sync = true })
+    end,
+    requires = {
+        'JoosepAlviste/nvim-ts-context-commentstring',
+        'nvim-treesitter/nvim-treesitter-textobjects',
+    },
+    config = function()
+        require('user.plugins.treesitter')
+    end,
+})
+
 use ({
     'glepnir/dashboard-nvim',
     config = function()
@@ -209,18 +224,15 @@ use({
     end
 })
 
--- Treesitter
+-- Language Server Protocol
 use({
-    'nvim-treesitter/nvim-treesitter',
-    run = function()
-        require('nvim-treesitter.install').update({ with_sync = true })
-    end,
+    'neovim/nvim-lspconfig',
     requires = {
-        'JoosepAlviste/nvim-ts-context-commentstring',
-        'nvim-treesitter/nvim-treesitter-textobjects',
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
     },
-    config = function()
-        require('user.plugins.treesitter')
+    config = function ()
+        require('user/plugins/lspconfig')
     end,
 })
 

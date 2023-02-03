@@ -35,7 +35,7 @@ vim.keymap.set('v', 'Y', 'myY`y')
 
 -- Move text up and down
 vim.keymap.set('i', '<C-j>', '<Esc>:move .+1<CR>==gi')
-vim.keymap.set('i', '<C-k>', '<Esc>:move .-2<CR>==gi')
+vim.keymap.set('i', '<C-k>', '<Esc> :move .-2<CR>==gi')
 vim.keymap.set('n', '<C-j>', ':move .+1<CR>==')
 vim.keymap.set('n', '<C-k>', ':move .-2<CR>==')
 vim.keymap.set('x', '<C-j>', ":move '>+1<CR>gv-gv")
