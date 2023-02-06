@@ -45,7 +45,7 @@ require('null-ls').setup({
     }
 })
 
-require('maason-null-ls').setup({ automatic_installation = true })
+require('mason-null-ls').setup({ automatic_installation = true })
 
 -- Keymaps
 vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>')
