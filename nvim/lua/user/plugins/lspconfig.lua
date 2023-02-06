@@ -2,17 +2,30 @@
 require('mason').setup()
 require('mason-lspconfig').setup({ automatic_installation = true })
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+
 -- PHP
-require('lspconfig').intelephense.setup({})
+require('lspconfig').intelephense.setup({ capabilities = capabilities })
 
 -- Javascript
 require('lspconfig').volar.setup({
-  -- Enable "Take Over Mode" where volar will provide all JS/TS LSP services
-  -- This drastically improves the responsiveness of diagnostic updates on change
-  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue'}
+    capabilities = capabilities,
+    -- Enable "Take Over Mode" where volar will provide all JS/TS LSP services
+    -- This drastically improves the responsiveness of diagnostic updates on change
+    filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue'}
 })
 
-require('lspconfig').tailwindcss.setup({})
+require('lspconfig').tailwindcss.setup({ capabilities = capabilities })
+
+-- JSON
+require('lspconfig').jsonls.setup({
+    capabilities = capabilities,
+    settings = {
+        json = {
+            schemas = require('schemastore').json.schemas(),
+        },
+    },
+})
 
 -- Keymaps
 vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>')
@@ -26,10 +39,10 @@ vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
 -- Diagnostic configuration
 vim.diagnostic.config({
-  virtual_text = false,
-  float = {
-    source = true
-  }
+    virtual_text = false,
+    float = {
+        source = true
+    }
 })
 
 vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError'})
