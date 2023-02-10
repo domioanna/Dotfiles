@@ -40,3 +40,6 @@ vim.keymap.set('n', '∆', ':move .+1<CR>==')
 vim.keymap.set('n', '˚', ':move .-2<CR>==')
 vim.keymap.set('v', '∆', ":move '>+1<CR>gv=gv")
 vim.keymap.set('v', '˚', ":move '<-2<CR>gv=gv")
+
+
+vim.keymap.set('n', '<Leader>pm', ':PhpactorContextMenu<CR>')

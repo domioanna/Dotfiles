@@ -23,7 +23,7 @@ db.setup({
             },
             { 
                 icon = '  ',
-                key = 'SPC f',
+                key = 'SPC SPC',
                 desc = 'Find file                 ',
                 action = 'Telescope find_files'
             },

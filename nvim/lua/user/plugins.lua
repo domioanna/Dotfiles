@@ -257,6 +257,15 @@ use({
     end,
 })
 
+use({
+    'phpactor/phpactor',
+    ft = 'php',
+    run = 'composer install --no-dev --optimize-autoloader',
+    config = function()
+        vim.keymap.set('n', '<Leader>pm', ':PhpactorContextMenu<CR>')
+    end
+})
+
 -- Testing
 use({
   'vim-test/vim-test',
