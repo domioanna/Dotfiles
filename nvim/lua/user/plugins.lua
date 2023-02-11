@@ -55,8 +55,19 @@ use({
     "neanias/everforest-nvim",
     -- Optional; default configuration will be used if setup isn't called.
     config = function()
-        require("everforest").setup()
-        vim.cmd('colorscheme everforest')
+        require("everforest").setup({
+            background = "soft",
+        })
+        vim.cmd([[colorscheme everforest]])
+
+        vim.cmd([[
+            highlight link TelescopePromptTitle PMenuSel
+            highlight link TelescopePreviewTitle PMenuSel
+            highlight link TelescopePromptNormal NormalFloat
+            highlight link TelescopePromptBorder FloatBorder
+            highlight link TelescopeNormal CursorLine
+            highlight link TelescopeBorder CursorLineBg
+        ]])
 
         -- Hide the characters in FloatBorder
         vim.api.nvim_set_hl(0, 'FloatBorder', {
@@ -185,7 +196,6 @@ use({
 use({
     'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
-    -- after = 'onedark.nvim',
     after = 'everforest-nvim',
     config = function()
         require('user/plugins/bufferline')
