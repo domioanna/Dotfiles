@@ -69,6 +69,16 @@ use({
             highlight link TelescopeBorder CursorLineBg
         ]])
 
+        vim.api.nvim_set_hl(0, 'NvimTreeNormal', {
+            fg = vim.api.nvim_get_hl_by_name('NvimTreeNormal', true).foreground,
+            bg = vim.api.nvim_get_hl_by_name('CursorLineBg', true).background,
+        })
+
+        vim.api.nvim_set_hl(0, 'NvimTreeEndOfBuffer', {
+            fg = vim.api.nvim_get_hl_by_name('NvimTreeNormal', true).foreground,
+            bg = vim.api.nvim_get_hl_by_name('CursorLineBg', true).background,
+        })
+
         -- Hide the characters in FloatBorder
         vim.api.nvim_set_hl(0, 'FloatBorder', {
             fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
@@ -243,6 +253,10 @@ use({
         vim.keymap.set('n', 'gS', ':Gitsigns undo_stage_hunk<CR>')
         vim.keymap.set('n', 'gp', ':Gitsigns preview_hunk<CR>')
         vim.keymap.set('n', 'gb', ':Gitsigns blame_line<CR>')
+
+        vim.api.nvim_set_hl(0, 'GitsignsAdd', { fg = "#a7c080", bg = "#333c43" })
+        vim.api.nvim_set_hl(0, 'GitsignsChange', { fg = '#e69875', bg = "#333c43" })
+        vim.api.nvim_set_hl(0, 'GitsignsDelete', { fg = '#e67e80', bg = "#333c43" })
     end
 })
 
