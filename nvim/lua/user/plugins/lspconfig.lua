@@ -4,6 +4,11 @@ require('mason-lspconfig').setup({ automatic_installation = true })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+vim.api.nvim_set_hl(0, 'DiagnosticError', { fg = "#a7c080", bg = "#333c43" })
+vim.api.nvim_set_hl(0, 'DiagnosticWarn', { fg = "#a7c080", bg = "#333c43" })
+vim.api.nvim_set_hl(0, 'DiagnosticInfo', { fg = "#a7c080", bg = "#333c43" })
+vim.api.nvim_set_hl(0, 'DiagnosticHint', { fg = "#a7c080", bg = "#333c43" })
+
 -- PHP
 require('lspconfig').intelephense.setup({ capabilities = capabilities })
 
