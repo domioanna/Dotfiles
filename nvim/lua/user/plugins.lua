@@ -321,6 +321,15 @@ use({
     end
 })
 
+-- Project configuration
+use({
+    'tpope/vim-projectionist',
+    requires = 'tpope/vim-dispatch',
+    config = function()
+        require('user/plugins/projectionist')
+    end,
+})
+
 -- Testing
 use({
   'vim-test/vim-test',
